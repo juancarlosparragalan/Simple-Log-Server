@@ -7,7 +7,7 @@ router.post('/', logger);
 function logger(req, res, next) {
     let message = req.body
     loggerF(message);
-    res.status(204).send();
+    res.header('x-security', 'hard').status(204).send();
 }
 
 module.exports = logger;
