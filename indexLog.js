@@ -2,7 +2,7 @@ const config = require('./config/config'),
     express = require("express"),
     cors = require('cors'),
     bodyParser = require('body-parser'),
-    healt = require('./routes/healthCheck'),
+    health = require('./routes/healthCheck'),
     logger = require('./routes/logger');
 
 const app = express(),
@@ -15,8 +15,8 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 app.use(bodyParser.json());
 
-//healt server
-app.use('/health', healt);
+//health server
+app.use('/health', health);
 
 app.use('/logger', logger);
 
