@@ -1,10 +1,10 @@
 const express = require('express'),
     router = express.Router();
 
-router.get('/', healt);
+router.get('/', health);
 
-async function healt(req, res, next) {
-    let healtResponse,
+async function health(req, res, next) {
+    let healthResponse,
         metaData = {
             dateTime: new Date().toISOString(),
             status: 'Success',
@@ -13,11 +13,11 @@ async function healt(req, res, next) {
         data = {
             message: 'Server Up!'
         };
-    healtResponse = {
+    healthResponse = {
         metaData,
         data
     }
-    res.status(healtResponse.metaData.statusCode).send(healtResponse);
+    res.status(healthResponse.metaData.statusCode).send(healthResponse);
 }
 
 module.exports = router;
