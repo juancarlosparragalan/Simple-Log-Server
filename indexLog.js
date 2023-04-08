@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 //health server
 app.use('/health', health);
-
+//Log method
 app.use('/logger', logger);
 
 server.listen(config.port, () => {
