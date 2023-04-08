@@ -21,5 +21,5 @@ app.use('/health', health);
 app.use('/logger', logger);
 
 server.listen(config.port, () => {
-    console.log("El servidor está inicializado en el puerto: [" + config.port);
+    console.log("El servidor está inicializado en el puerto: " + config.port);
 });
